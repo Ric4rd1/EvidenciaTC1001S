@@ -14,16 +14,20 @@ def grid():
 
 def drawx(x, y):
     """Draw X player."""
-    line(x, y, x + 133, y + 133)
-    line(x, y + 133, x + 133, y)
+    t.pencolor("pink")
+    t.pensize(3)
+    line(x + 40, y + 30, x + 133, y + 133)
+    line(x + 40, y + 133, x + 133, y + 30)
 
 
 def drawo(x, y):
     """Draw O player."""
+    t.pencolor("green")
+    t.pensize(3)
     t.up()
-    t.goto(x + 67, y + 5)
+    t.goto(x + 68, y + 16)
     t.down()
-    t.circle(62)
+    t.circle(48)
 
 
 def floor(value):
