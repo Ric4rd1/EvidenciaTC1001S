@@ -1,6 +1,7 @@
-from turtle import *
-
+import turtle
 from freegames import line
+
+t = turtle.Turtle()
 
 
 def grid():
@@ -19,10 +20,10 @@ def drawx(x, y):
 
 def drawo(x, y):
     """Draw O player."""
-    up()
-    goto(x + 67, y + 5)
-    down()
-    circle(62)
+    t.up()
+    t.goto(x + 67, y + 5)
+    t.down()
+    t.circle(62)
 
 
 def floor(value):
@@ -41,14 +42,14 @@ def tap(x, y):
     player = state['player']
     draw = players[player]
     draw(x, y)
-    update()
+    t.update()
     state['player'] = not player
 
 
-setup(420, 420, 370, 0)
-hideturtle()
-tracer(False)
-grid()
-update()
-onscreenclick(tap)
-done()
+t.setup(420, 420, 370, 0)
+t.hideturtle()
+t.tracer(False)
+t.grid()
+t.update()
+t.onscreenclick(tap)
+t.done()
