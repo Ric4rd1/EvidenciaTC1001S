@@ -8,7 +8,7 @@ Este repositorio consiste en tres videojuegos escritos en Python, obtenidos de l
 
 ## Asignación de videojuegos
 1. **PacMan** - Ricard Esteve Catalá Garfias A01710071
-2. **Tic Tac Toe** - Nombre Matrícula
+2. **Tic Tac Toe** - Emilia Cárdenas Lobatón A01706807
 3. **Juego de Memoria** - Nombre Matrícula
 
 ## Cambios realizados por videojuego 🎮
