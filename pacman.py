@@ -8,18 +8,26 @@ Exercises
 4. Make the ghosts faster/slower.
 5. Make the ghosts smarter.
 """
-
+#import functions from libraries
 from random import choice
 from turtle import Turtle, bgcolor, clear, up, goto, dot, update, ontimer
 from turtle import setup, hideturtle, tracer, listen, onkey, done
 
 from freegames import floor, vector
 
+#initialize variables
+
+#pacman score
 state = {'score': 0}
+#path to draw the game
 path = Turtle(visible=False)
+#score writer
 writer = Turtle(visible=False)
+#pacman direction
 aim = vector(5, 0)
+#pacman starting position
 pacman = vector(-40, -80)
+#ghosts starting positions and directions
 ghosts = [
     [vector(-180, 160), vector(5, 0)],
     [vector(-180, -160), vector(0, 5)],
@@ -27,6 +35,8 @@ ghosts = [
     [vector(100, -160), vector(-5, 0)],
 ]
 # fmt: off
+
+#game board
 tiles = [
     0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0,
     0, 1, 1, 1, 1, 1, 1, 1, 0, 1, 1, 1, 1, 1, 1, 1, 0, 0, 0, 0,
@@ -51,7 +61,9 @@ tiles = [
 ]
 # fmt: on
 
+#functions
 
+#draw square
 def square(x, y):
     """Draw square using path at (x, y)."""
     path.up()
@@ -65,7 +77,7 @@ def square(x, y):
 
     path.end_fill()
 
-
+#offset of point in tiles
 def offset(point):
     """Return offset of point in tiles."""
     x = (floor(point.x, 20) + 200) / 20
@@ -73,7 +85,7 @@ def offset(point):
     index = int(x + y * 20)
     return index
 
-
+#check if point is valid
 def valid(point):
     """Return True if point is valid in tiles."""
     index = offset(point)
@@ -88,7 +100,7 @@ def valid(point):
 
     return point.x % 20 == 0 or point.y % 20 == 0
 
-
+#draw world
 def world():
     """Draw world using path."""
     bgcolor('black')
@@ -107,7 +119,7 @@ def world():
                 path.goto(x + 10, y + 10)
                 path.dot(2, 'white')
 
-
+#move pacman and ghosts
 def move():
     """Move pacman and all ghosts."""
     writer.undo()
@@ -157,7 +169,7 @@ def move():
 
     ontimer(move, 100)
 
-
+#change pacman aim
 def change(x, y):
     """Change pacman aim if valid."""
     if valid(pacman + vector(x, y)):
@@ -165,17 +177,24 @@ def change(x, y):
         aim.y = y
 
 
+#main
+
+#setup game
 setup(420, 420, 370, 0)
 hideturtle()
 tracer(False)
 writer.goto(160, 160)
 writer.color('white')
 writer.write(state['score'])
+#listen to keyboard
 listen()
+#set pacman movement
 onkey(lambda: change(5, 0), 'Right')
 onkey(lambda: change(-5, 0), 'Left')
 onkey(lambda: change(0, 5), 'Up')
 onkey(lambda: change(0, -5), 'Down')
+#draw world
 world()
+#start game
 move()
 done()
