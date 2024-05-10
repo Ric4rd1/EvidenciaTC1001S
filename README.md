@@ -17,8 +17,11 @@ Este repositorio consiste en tres videojuegos escritos en Python, obtenidos de l
 	- Ejemplo 
 	- Ejemplo
 2. **Tic Tac Toe**: descripción general de lo que realizaste.
-	- Ejemplo
-	- Ejemplo
+	- Primero añadí el juego sin editar a mi rama
+	- Utilice el PEP8 (flake8) para poder tener el formato el codigo base
+        - Cambié el color y el tamaño de la X y la O del juego, para luego centrarlos en las casillas
+        - Hice un diccionario que pudiera valirdar si esa casilla ya habia sido utilizada anteriormente
+        - Cambié todos los comentarios a español, ya que estaban en ingles
 3. **Juego de Memoria**: descripción general de lo que realizaste.
 	- Agregue un contador de taps(clicks) que del jugador y que vaya aumentado justamente cada vez que le de click, también lo puse en la parte de arriba a la izquierda para que se pudiera ver el juego bien sin que obstruya la visibilidad del juego.
 	- Puse que detectara cuando el juego se complete, aparece un mensaje pequeño en el centro de la imagen un poco más abajo, para que se pudiera ver las letras las cambie de color verde que se me hizo el color que más se podía ve, el texto lo puse en esa parte porque si un jugador está en la ventana pequeña me gustaría que viera por lo menos este mensaje de final.
