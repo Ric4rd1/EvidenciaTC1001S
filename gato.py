@@ -45,11 +45,14 @@ def tap(x, y):
     y = floor(y)
     player = state['player']
     draw = players[player]
-    draw(x, y)
+    if (x, y) not in vis:
+        vis[(x, y)] = True
+        draw(x, y)
     t.update()
     state['player'] = not player
 
 
+vis = {}
 t.setup(420, 420, 370, 0)
 t.hideturtle()
 t.tracer(False)
