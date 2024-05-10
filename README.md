@@ -20,8 +20,8 @@ Este repositorio consiste en tres videojuegos escritos en Python, obtenidos de l
 	- Ejemplo
 	- Ejemplo
 3. **Juego de Memoria**: descripción general de lo que realizaste.
-	- Ejemplo
-	- Ejemplo
+	- Agregue un contador de taps(clicks) que del jugador y que vaya aumentado justamente cada vez que le de click, también lo puse en la parte de arriba a la izquierda para que se pudiera ver el juego bien sin que obstruya la visibilidad del juego.
+	- Puse que detectara cuando el juego se complete, aparece un mensaje pequeño en el centro de la imagen un poco más abajo, para que se pudiera ver las letras las cambie de color verde que se me hizo el color que más se podía ve, el texto lo puse en esa parte porque si un jugador está en la ventana pequeña me gustaría que viera por lo menos este mensaje de final.
 
 ## Requerimientos
 
