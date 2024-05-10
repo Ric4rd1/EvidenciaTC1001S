@@ -17,7 +17,8 @@ Este repositorio consiste en tres videojuegos escritos en Python, obtenidos de l
 	- Primero agregué el codigo base obtenido de la librería freegames  
 	- Después, analicé el código y utilicé la herramienta Flake8 para adecuarlo al estándar de Python PEP8.
 	- Luego, cambié el tablero del juego modificando la matriz (tiles).
-	- Finalmente, ajusté la velocidad de los fantasmas modificando el arreglo de vectores options para que se movieran 15 píxeles en vez de 5.
+	- Ajusté la velocidad de los fantasmas modificando el arreglo de vectores options para que se movieran 15 píxeles en vez de 5.
+  	- Finalmente, agregué comentarios al código
 2. **Tic Tac Toe**: descripción general de lo que realizaste.
 	- Ejemplo
 	- Ejemplo
