@@ -5,7 +5,7 @@ t = turtle.Turtle()
 
 
 def grid():
-    """Draw tic-tac-toe grid."""
+    """Dibuja la cuadricula del tic-tac-toe."""
     line(-67, 200, -67, -200)
     line(67, 200, 67, -200)
     line(-200, -67, 200, -67)
@@ -13,7 +13,7 @@ def grid():
 
 
 def drawx(x, y):
-    """Draw X player."""
+    """Dibujar X para el jugador."""
     t.pencolor("pink")
     t.pensize(3)
     line(x + 40, y + 30, x + 133, y + 133)
@@ -21,7 +21,7 @@ def drawx(x, y):
 
 
 def drawo(x, y):
-    """Draw O player."""
+    """Dibujar O para el jugador."""
     t.pencolor("green")
     t.pensize(3)
     t.up()
@@ -31,7 +31,7 @@ def drawo(x, y):
 
 
 def floor(value):
-    """Round value down to grid with square size 133."""
+    """Redondea el valor de la cuadricula a 133."""
     return ((value + 200) // 133) * 133 - 200
 
 
@@ -40,7 +40,7 @@ players = [drawx, drawo]
 
 
 def tap(x, y):
-    """Draw X or O in tapped square."""
+    """Dibuja X o O en el cuadro que sea clikeado."""
     x = floor(x)
     y = floor(y)
     player = state['player']
